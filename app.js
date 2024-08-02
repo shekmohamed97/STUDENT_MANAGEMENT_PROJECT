@@ -18,7 +18,7 @@ config({path:"./Config/.env"});
 app.use(
     cors({
         origin:[process.env.FRONTEND_URL,"https://student-management-project.onrender.com/api/v1.1/admin/signin"],
-        methods:["GET","POST","PUT","DELETE"]
+        methods:["GET","POST","PUT","DELETE"]//
     })
 );
 
