@@ -15,12 +15,13 @@ const app=express();
 
 config({path:"./Config/.env"});
 
-app.use(
-    cors({
-        origin:[process.env.FRONTEND_URL,"https://student-management-project.onrender.com/api/v1.1/admin/signin"],
-        methods:["GET","POST","PUT","DELETE"]//
-    })
-);
+    app.use(
+        cors({
+            origin: [process.env.FRONTEND_URL, "https://student-management-project.onrender.com", "http://localhost:5173"],
+            methods: ["GET", "POST", "PUT", "DELETE"]
+        })
+    );
+    
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
