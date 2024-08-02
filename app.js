@@ -32,7 +32,7 @@ app.use("/api/v1.1/announcement",announcementRouter);
 app.use("/api/v1.1/class",classRouter);
 app.use("/api/v1.1/student",studentRouter);
 app.use("/api/v1.1/users",usersRouter);
-app.use("/api/v1.1/",taskRouter);
+app.use("/api/v1.1/task",taskRouter);
 app.use("/api/v1.1/teacher",teacherRouter);
 
 
