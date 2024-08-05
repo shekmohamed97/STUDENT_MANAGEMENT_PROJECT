@@ -31,3 +31,24 @@ export const createTask = async (req, res, next) => {
     }
   }
 
+
+export  const markDon=async(req,res,next)=>{
+  const{id}=req.params;
+  try{
+    const task =await Task.findById(id);
+    if(!task){
+      return res.status(404).json({
+        success:false,
+        message:`Task ${id} not found`
+      });
+    }
+    task.done=true
+    await task.save();
+    res.json({
+      success:true,
+      message:`Task ${id} marked Done`
+    })
+  }catch(err){
+    next(err);
+  }
+}
