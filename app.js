@@ -19,7 +19,7 @@ config({path:"./Config/.env"});
         cors({
             origin: [
                  "https://student-management-project.onrender.com",
-                  
+                   "http://localhost:5173",
                  "https://dazzling-longma-591241.netlify.app"
             ],
             methods: ["GET", "POST", "PUT", "DELETE"]
