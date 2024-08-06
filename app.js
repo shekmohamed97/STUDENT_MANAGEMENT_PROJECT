@@ -17,7 +17,12 @@ config({path:"./Config/.env"});
 
     app.use(
         cors({
-            origin: [process.env.FRONTEND_URL, "https://student-management-project.onrender.com", "http://localhost:5173"],
+            origin: [process.env.FRONTEND_URL,
+                 "https://student-management-project.onrender.com",
+                 "http://localhost:5173",
+                "https://student-managment-system-zja5.onrender.com/api/v1.1/admin/register",
+                "https://dazzling-longma-591241.netlify.app"
+            ],
             methods: ["GET", "POST", "PUT", "DELETE"]
         })
     );
