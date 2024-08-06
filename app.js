@@ -15,17 +15,19 @@ const app=express();
 
 config({path:"./Config/.env"});
 
-    app.use(cors(corsOpration));
-    
 const corsOpration={
-    origin: [
-        "https://student-management-project.onrender.com",
-          "http://localhost:5173",
-        "https://elegant-paletas-e1b8b5.netlify.app"
-   ],
-   methods:["GET","POST","PUT","DELETE"],
-   allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: [
+      "https://student-management-project.onrender.com",
+        "http://localhost:5173",
+      "https://elegant-paletas-e1b8b5.netlify.app"
+ ],
+ methods:["GET","POST","PUT","DELETE"],
+ allowedHeaders: ['Content-Type', 'Authorization'],
 }
+
+app.use(cors(corsOpration));
+    
+
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
