@@ -15,18 +15,17 @@ const app=express();
 
 config({path:"./Config/.env"});
 
-    app.use(
-        cors({
-            origin: [
-                 "https://student-management-project.onrender.com",
-                   "http://localhost:5173",
-                 "https://dazzling-longma-591241.netlify.app"
-            ],
-            methods: ["GET", "POST", "PUT", "DELETE"]
-        })
-    );
+    app.use(cors(corsOpration));
     
-
+const corsOpration={
+    origin: [
+        "https://student-management-project.onrender.com",
+          "http://localhost:5173",
+        "https://dazzling-longma-591241.netlify.app"
+   ],
+   methods:["GET","POST","PUT","DELETE"],
+   allowedHeaders: ['Content-Type', 'Authorization'],
+}
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
