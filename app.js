@@ -21,7 +21,7 @@ const corsOpration={
     origin: [
         "https://student-management-project.onrender.com",
           "http://localhost:5173",
-        "https://dazzling-longma-591241.netlify.app"
+        "https://elegant-paletas-e1b8b5.netlify.app"
    ],
    methods:["GET","POST","PUT","DELETE"],
    allowedHeaders: ['Content-Type', 'Authorization'],
