@@ -1,6 +1,6 @@
 import express from "express";
 import { config } from "dotenv";
-import cors from "cors";
+// import cors from "cors";
 import { dbConnection } from "./database/dbConnection.js";
 import adminRegisterRouter from "./Routers/adminRegisterRouter.js"
 import announcementRouter from "./Routers/announcementRouter.js";
@@ -30,7 +30,7 @@ config({path:"./Config/.env"});
 //   })
 // );
     
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
