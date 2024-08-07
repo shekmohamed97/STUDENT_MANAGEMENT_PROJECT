@@ -9,7 +9,7 @@ import studentRouter from "./Routers/studentRouter.js";
 import usersRouter from "./Routers/userRouter.js";
 import taskRouter from "./Routers/taskRouter.js";
 import teacherRouter from "./Routers/teacherRouter.js";
-
+import corsSet from "cors";
 
 const app=express();
 
@@ -29,7 +29,15 @@ config({path:"./Config/.env"});
 //     credentials: true,
 //   })
 // );
-    
+    app.use(corsSet({
+      origin:[
+        "http://localhost:5173",//
+        "https://elegant-paletas-e1b8b5.netlify.app",
+        "https://student-management-project.onrender.com"
+      ],
+      methods: ["GET", "POST", "PUT", "DELETE"], 
+      credentials:true
+    }))
 // app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
