@@ -20,7 +20,7 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "http://localhost:5174",
-    "https://loquacious-arithmetic-307fec.netlify.app/",
+    "https://loquacious-arithmetic-307fec.netlify.app",
     "https://student-management-project.onrender.com"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
