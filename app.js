@@ -20,7 +20,7 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "http://localhost:5174",
-    "https://elegant-paletas-e1b8b5.netlify.app",
+    "https://cosmic-stardust-a294ca.netlify.app",
     "https://student-management-project.onrender.com"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
