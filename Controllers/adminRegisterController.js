@@ -29,3 +29,4 @@ export const adminRegister=async (req,res,next)=>{
         next(error);
     }
 }
+
