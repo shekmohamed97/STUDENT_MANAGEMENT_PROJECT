@@ -21,7 +21,8 @@ app.use(cors({
     "http://localhost:5173",
     "http://localhost:5174",
     "https://cosmic-stardust-a294ca.netlify.app",
-    "https://student-management-project.onrender.com"
+    "https://student-management-project.onrender.com",
+    "https://dazzling-longma-591241.netlify.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
